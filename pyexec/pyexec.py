@@ -1,13 +1,14 @@
 import sys
 from os.path import basename
 import pkg_resources
+import commands
 
 try:
     from StringIO import StringIO
 except ImportError:
     from io import StringIO
 
-from sphinx.util.compat import Directive
+from docutils.parsers.rst import Directive
 from sphinx.directives.code import CodeBlock
 from docutils import nodes, statemachine
 from sphinx.util.nodes import set_source_info
